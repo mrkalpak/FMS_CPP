@@ -8,9 +8,9 @@
     <title>FMS</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./css/index.css">
     </link>
-    <script src="index.js"></script>
+    <script src="./js/index.js"></script>
 </head>
 
 <body>
