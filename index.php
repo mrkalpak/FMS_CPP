@@ -35,6 +35,6 @@
          </div>
       </div>
    </section>  
-    
+   
    <!--Ends Body of the page-->
    <?php include "./footer.php"; ?>
