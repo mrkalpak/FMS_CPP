@@ -1,4 +1,14 @@
 <?php include "./header.php"; ?>
+<?php 
+session_start();
+if (isset($_SESSION['id'])) {
+    include "../database.php";
+    
+    
+}else{
+    echo "<script>alert('You are not login');document.location='../student_login.php'; </script>";
+}
+?>
 
 <body class="admin">
     <!--sidebar-->
@@ -79,5 +89,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
+<!--content section-->
+<div id="container">
+    <setion class="py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-9">
+                    <h2 class="dash font-weight-bold m-0 text-dark mt-4 ml-4"><span style="margin-left: 60px;">Welcome to Student Feedback System.....!</span></h2>
+                </div>
+            </div>
+        </div>
+    </setion>
+
+    <section>
+</div>
+<!--end content section-->
 
 <?php include "./footer.php"; ?>

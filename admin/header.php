@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/index.css"></link>
-    <script src="index.js"></script>
+    <script src="../js/index.js"></script>
 </head>
 
 <body class="admin">
@@ -25,14 +25,12 @@
                 
             </div>
             <div class="menu ">
-                <a href="index.html" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
-                <a href="admin_dashboard.html" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Dashboard</a>
-                <a href="admin_profile.html" class="d-block text-light p-3"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
-                <a href="add_faculty.html" class="d-block text-light p-3"><i class="bi bi-plus-square-fill mr-2 lead"></i>Add Faculty </a>
-                <a href="view_feedback.html" class="d-block text-light p-3"><i class="bi bi-menu-up mr-2 lead"></i>View Feedbacks</a>
-                <a href="instructions.html" class="d-block text-light p-3"><i class="bi bi-ui-checks mr-2 lead"></i>Give Important Instuctions</a>
-            </div>
-            
+                <a href="./index.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
+                <a href="./admin_dashboard.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Dashboard</a>
+                <a href="./admin_profile.php" class="d-block text-light p-3"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
+                <a href="./add_faculty.php" class="d-block text-light p-3"><i class="bi bi-plus-square-fill mr-2 lead"></i>Add Faculty </a>
+                <a href="./view_feedback.php" class="d-block text-light p-3"><i class="bi bi-menu-up mr-2 lead"></i>View Feedbacks</a>
+            </div>  
         </div>
         <!--end of sidebar-->
         <!--Navbar-->
