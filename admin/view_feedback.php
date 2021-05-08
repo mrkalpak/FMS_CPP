@@ -1,30 +1,37 @@
 <?php
 session_start();
 
-$rating = [];
-include "../database.php";
-$faculty1 = $_SESSION['name'];
-$query = "SELECT * FROM question";
-$que = [];
-$result = mysqli_query($conn, $query);
-if ($result) {
-    while ($row = mysqli_fetch_row($result)) {
-        array_push($que, $row);
+if (isset($_SESSION['id'])) {
+    include "../database.php";
+
+
+
+    $rating = [];
+    include "../database.php";
+    $faculty1 = $_SESSION['name'];
+    $query = "SELECT * FROM question";
+    $que = [];
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        while ($row = mysqli_fetch_row($result)) {
+            array_push($que, $row);
+        }
+    } else {
+        echo "<script>alert('error to connect to database');</script>";
+    }
+    $query = "SELECT * FROM rating where faculty='$faculty1'";
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+
+        while ($row = mysqli_fetch_row($result)) {
+            array_push($rating, $row);
+        }
+    } else {
+        echo "<script>alert('error to connect to database'); </script>";
     }
 } else {
-    echo "<script>alert('error to connect to database');</script>";
+    echo "<script>alert('You are not login');document.location='../student_login.php'; </script>";
 }
-$query = "SELECT * FROM rating where faculty='$faculty1'";
-$result = mysqli_query($conn, $query);
-if ($result) {
-
-    while ($row = mysqli_fetch_row($result)) {
-        array_push($rating, $row);
-    }
-} else {
-    echo "<script>alert('error to connect to database'); </script>";
-}
-
 ?>
 
 
@@ -57,22 +64,22 @@ if ($result) {
                             <td>
                                 <label for="Q<?php echo $que[$i][0] ?>"><?php echo $que[$i][1] ?></label>
                             </td>
-                          
-                                
-                     
-                           
+
+
+
+
                             <td>
-                                <?php  $r = (int)($rating[$i][2] / $rating[$i][4]) ?>
-                                <?php for ($j = 0; $j < $r; $j++) { 
-                               ?>
+                                <?php $r = (int)($rating[$i][2] / $rating[$i][4]) ?>
+                                <?php for ($j = 0; $j < $r; $j++) {
+                                ?>
                                     <span class="fa fa-star checked"></span>
                                 <?php } ?>
                             </td>
-                    
-                 
-                    
-                    </tr>
-                <?php } ?>
+
+
+
+                        </tr>
+                    <?php } ?>
 
                 </tbody>
             </table>
