@@ -2,10 +2,6 @@
 session_start();
 
 if (isset($_SESSION['id'])) {
-    include "../database.php";
-
-
-
     $rating = [];
     include "../database.php";
     $faculty1 = $_SESSION['name'];
