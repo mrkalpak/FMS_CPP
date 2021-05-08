@@ -1,5 +1,14 @@
 <?php include "./header.php"; ?>
-
+<?php 
+session_start();
+if (isset($_SESSION['id'])) {
+    include "../database.php";
+    
+    
+}else{
+    echo "<script>alert('You are not login');document.location='../student_login.php'; </script>";
+}
+?>
 
 <!--content section-->
 <div id="container">

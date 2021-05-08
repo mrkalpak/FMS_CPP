@@ -22,7 +22,7 @@
         <div id="sidebar-container" class="bg-info ">
             <div class="logo media-body">
                 <h4 class="text-light font-weight-bold m-0">Student Feedback System</h4>
-                <button id="close_btn" type="button" class="close" aria-label="Close" onclick="closeNav()">
+                <button id="close_btn" type="button" class="close" aria-label="Close" onclick="closeNav()" style="display: none;">
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
@@ -42,7 +42,7 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img class="img-fluid rounded-circle mr-2" src="login_logo.png" alt="..." width="50" height="50"></span>
+                    <span><img class="img-fluid rounded-circle mr-2" src="../img/login_logo.png" alt="..." width="50" height="50"></span>
                 </button>
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -52,8 +52,8 @@
                                 <span class=".pill"><img src="https://img.icons8.com/plasticine/40/000000/automatic.png" />Student</span>
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="student_profile.html">Profile</a>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="./student_profile.php"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
+                                <a class="dropdown-item " href="../logout.php" style="color: red;"><i class=" bi bi-box-arrow-right mr-2 lead"></i>Logout</a>
                             </div>
                         </li>
                     </ul>

@@ -1,70 +1,76 @@
 <?php include "./header.php"; ?>
 <?php
-include "../database.php";
-$query = "SELECT * FROM faculty";
-$faculty = [];
-$result = mysqli_query($conn, $query);
-if ($result) {
-    while ($row = mysqli_fetch_row($result)) {
-        array_push($faculty, $row);
-    }
-} else {
-    echo "<script>alert('error to connect to database'); document.location='./';</script>";
-}
-$query = "SELECT * FROM question";
-$que = [];
-$result = mysqli_query($conn, $query);
-if ($result) {
-    while ($row = mysqli_fetch_row($result)) {
-        array_push($que, $row);
-    }
-} else {
-    echo "<script>alert('error to connect to database'); document.location='./';</script>";
-}
-
-if (isset($_POST['faculty1'])) {
-    extract($_POST);
-    $query = "SELECT * FROM rating where faculty='$faculty1'";
-    $rating = [];
+session_start();
+if (isset($_SESSION['id'])) {
+    include "../database.php";
+    $query = "SELECT * FROM faculty";
+    $faculty = [];
     $result = mysqli_query($conn, $query);
     if ($result) {
-        if (mysqli_num_rows($result) > 0) {
-            while ($row = mysqli_fetch_row($result)) {
-                array_push($rating, $row);
-            }
-            for ($i = 0; $i < sizeof($rating); $i++) {
-                $r = "rating" . $que[$i][0];
-                $re = $$r;
-                $rat = $rating[$i][2] + $re;
-                $nentry = $rating[$i][4] + 1;
-                $id = $rating[$i][0];
-                $query = "  UPDATE `rating` SET `rating`=$rat,`noentry`=$nentry WHERE `id`= $id";
-                echo $query;
-                $result = mysqli_query($conn, $query);
-                if ($result) {
-                    echo "<script>alert('Profile Updated'); document.location='./givefeedback.php';</script>";
-                } else {
-                    echo "<script>alert('error to connect to database'); //document.location='./';</script>";
+        while ($row = mysqli_fetch_row($result)) {
+            array_push($faculty, $row);
+        }
+    } else {
+        echo "<script>alert('error to connect to database');</script>";
+    }
+    $query = "SELECT * FROM question";
+    $que = [];
+    $result = mysqli_query($conn, $query);
+    if ($result) {
+        while ($row = mysqli_fetch_row($result)) {
+            array_push($que, $row);
+        }
+    } else {
+        echo "<script>alert('error to connect to database');</script>";
+    }
+    
+    if (isset($_POST['faculty1'])) {
+        extract($_POST);
+        $query = "SELECT * FROM rating where faculty='$faculty1'";
+        $rating = [];
+        $result = mysqli_query($conn, $query);
+        if ($result) {
+            if (mysqli_num_rows($result) > 0) {
+                while ($row = mysqli_fetch_row($result)) {
+                    array_push($rating, $row);
+                }
+                for ($i = 0; $i < sizeof($rating); $i++) {
+                    $r = "rating" . $que[$i][0];
+                    $re = $$r;
+                    $rat = $rating[$i][2] + $re;
+                    $nentry = $rating[$i][4] + 1;
+                    $id = $rating[$i][0];
+                    $query = "  UPDATE `rating` SET `rating`=$rat,`noentry`=$nentry WHERE `id`= $id";
+                    
+                    $result = mysqli_query($conn, $query);
+                    if ($result) {
+                        echo "<script>alert('Submited'); document.location='./givefeedback.php';</script>";
+                    } else {
+                        echo "<script>alert('error to connect to database'); </script>";
+                    }
+                }
+            } else {
+                for ($i = 0; $i < sizeof($que); $i++) {
+                    $r = "rating" . $que[$i][0];
+                    $re = $$r;
+                    $q = $que[$i][1];
+                    $query = "INSERT INTO `rating`(`que`,`rating`,`faculty`,`noentry`) VALUES('$q',$re,'$faculty1',1)";
+                    $result = mysqli_query($conn, $query);
+                    if ($result) {
+                        echo "<script>alert('Submited'); document.location='./givefeedback.php';</script>";
+                    } else {
+                        echo "<script>alert('error to connect to database'); </script>";
+                    }
                 }
             }
         } else {
-            for ($i = 0; $i < sizeof($que); $i++) {
-                $r = "rating" . $que[$i][0];
-                $re = $$r;
-                $q = $que[$i][1];
-                $query = "INSERT INTO `rating`(`que`,`rating`,`faculty`,`noentry`) VALUES('$q',$re,'$faculty1',1)";
-                $result = mysqli_query($conn, $query);
-                if ($result) {
-                    echo "<script>alert('Profile Updated'); document.location='./givefeedback.php';</script>";
-                } else {
-                    echo "<script>alert('error to connect to database'); //document.location='./';</script>";
-                }
-            }
+            echo "<script>alert('error to connect to database');</script>";
         }
-    } else {
-        echo "<script>alert('error to connect to database'); document.location='./';</script>";
     }
+}else{
+    echo "<script>alert('You are not login');document.location='../student_login.php'; </script>";
 }
+
 ?>
 
 
@@ -126,7 +132,7 @@ if (isset($_POST['faculty1'])) {
                                         <label for="q<?php echo $que[$i][0] ?>3" class="fa fa-star"></label>
                                         <input type="radio" value="4" name="rating<?php echo $que[$i][0] ?>" id="q<?php echo $que[$i][0] ?>4">
                                         <label for="q<?php echo $que[$i][0] ?>4" class="fa fa-star"></label>
-                                        <input type="radio" value="5" name="rating<?php echo $que[$i][0] ?>" id="q<?php echo $que[$i][0] ?>5">
+                                        <input type="radio" value="5" checked name="rating<?php echo $que[$i][0] ?>" id="q<?php echo $que[$i][0] ?>5">
                                         <label for="q<?php echo $que[$i][0] ?>5" class="fa fa-star"></label>
                                     </div>
                                 </div>
