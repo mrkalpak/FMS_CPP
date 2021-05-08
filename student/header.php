@@ -27,7 +27,7 @@
                 </button>
             </div>
             <div class="menu ">
-                <a href="./index.php" class="d-block text-light p-3"> <i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
+                <a href="../index.php" class="d-block text-light p-3"> <i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
                 <a href="./Student_home.php" class="d-block text-light p-3"> <i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Dashboard</a>
                 <a href="./student_profile.php" class="d-block text-light p-3"> <i class="bi bi-person-square mr-2 lead"></i>Profile</a>
                 <a href="./givefeedback.php" class="d-block text-light p-3"> <i class="bi bi-menu-up mr-2 lead"></i>Give Feedbacks</a>

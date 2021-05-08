@@ -10,7 +10,15 @@
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/index.css"></link>
-    <script src="../js/index.js"></script>
+   <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+   <style>.checked {
+  color: #ffe400;
+
+font-size: 20px;
+  
+  font-weight: 800;
+  text-align: center;
+  ;}</style>
 </head>
 
 <body class="admin">
@@ -19,7 +27,7 @@
         <div id="sidebar-container" class="bg-info ">
             <div class="logo media-body">
                 <h4 class="text-light font-weight-bold m-0">Student Feedback System</h4>
-                <button id="close_btn" type="button" class="close" aria-label="Close" onclick="closeNav()">
+                <button id="close_btn" type="button" class="close" aria-label="Close" onclick="closeNav()" style="display: none;">
                     <span aria-hidden="true">&times;</span>
                 </button>
                 
@@ -36,10 +44,10 @@
         <!--Navbar-->
         <div class="flex-grow-1">
             <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom ">
-                <button id="sidebarCollapse" type="button" class="btn btn-light bg-light square shadow-sm px-2 mb-4" 
+                <button id="sidebarCollapse" type="button" class="btn btn-light bg-light square shadow-sm px-2 mb-4 ml-2" 
                     onclick="openNav()" >
-                    <i class="fa fa-bars mr-1"></i>
-                    <span class="navbar-toggler-icon"></span>
+                   
+                    <span class="navbar-toggler-icon "></span>
                 </button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,15 +58,36 @@
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
-                                <span class=".pill"><img src="user_login.png"></img>
-                                Ashwini Pawar</span> 
+                                <span class=".pill"><img src="../img/user_login.png"></img>
+                                Admin Admin</span> 
                             </a>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item" href="#">Profile</a>
                                 <a class="dropdown-item" href="#">Change Password</a>
-                                <a class="dropdown-item" href="#">Logout</a>
+                                <a class="dropdown-item" href="../logout.php">Logout</a>
                             </div>
                         </li>
                     </ul>
                 </div>   
             </nav>
+   <script>
+   //For Sidenav 
+const openNav = () => {
+    document.getElementById('sidebar-container').style.width = "350px";
+    document.getElementById('close_btn').style.display = "block";
+}
+const closeNav = () => {
+    document.getElementById('sidebar-container').style.width = "0";
+    document.getElementById('close_btn').style.display = "none";
+}
+
+//For Feedback Form
+function visible_Feedback() {
+    const x = document.getElementById("sel").value;
+    if (x == "--") {
+        document.getElementById("feedback").style.visibility = 'hidden';
+    }
+    else {
+        document.getElementById("feedback").style.visibility = 'visible';
+    }
+}</script>

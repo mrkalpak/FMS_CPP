@@ -11,8 +11,9 @@
     if(mysqli_num_rows($result)>0){
       $row = mysqli_fetch_row($result);
       $_SESSION['id']=$row[0];
-      $_SESSION['uname']= $row[1];
-      header('location:./admin/admin_dashboard.php');
+      echo $_SESSION['id'];
+      $_SESSION['name']= $row[1];
+      header('location:./admin/view_feedback.php');
     }else{
       echo "<script>alert('invalid name or password');document.location='./admin_login.php';</script>";
     }
