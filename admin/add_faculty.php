@@ -31,6 +31,7 @@ if (isset($_SESSION['id'])) {
 
 <?php include "./header.php"; ?>
 <!--content section-->
+<style></style>
             <div id="container">
                 <setion class="py-3 container-fluid">
                     <div class="row justify-content-center">
@@ -44,7 +45,7 @@ if (isset($_SESSION['id'])) {
                 <section>
                     <div class="container ">
                         <div class="row mt-2 mb-4 justify-content-center">
-                            <div class="card card-body col-sm-6 update ">
+                            <div class="card card-body col-sm-6 fontforform ">
                                 <form id="card_content" method="post" action="./add_faculty.php">
                                     <label>Full Name:</label>
                                     <input type="text" class="form-control" placeholder="Enter Full Name" id="fname" name="fname" required> 
