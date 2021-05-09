@@ -9,16 +9,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="../css/index.css"></link>
+    <link rel="stylesheet" href="./css/index.css"></link>
    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-   <style>.checked {
-  color: #ffe400;
-
-font-size: 20px;
-  
-  font-weight: 800;
-  text-align: center;
-  ;}</style>
+ 
 </head>
 
 <body class="admin">
