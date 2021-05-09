@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 08, 2021 at 02:33 PM
+-- Generation Time: May 09, 2021 at 02:51 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -38,7 +38,7 @@ CREATE TABLE `faculty` (
 --
 
 INSERT INTO `faculty` (`id`, `name`) VALUES
-(1, 'Ashwini Lokhande Mam'),
+(1, 'Ashwini Lokhande'),
 (2, 'Naina Borse Mam'),
 (3, 'Sonali Jaju Mam'),
 (4, 'Darshana Patil Mam');
@@ -62,7 +62,7 @@ CREATE TABLE `fmsadmin` (
 --
 
 INSERT INTO `fmsadmin` (`id`, `name`, `uname`, `upassword`, `email`) VALUES
-(1, 'Ashwini Lokhande Mam', 'admin_admin', 'admin@123', 'admin@gmail.com'),
+(1, 'Ashwini Lokhande', 'admin_admin', 'admin@123', 'admin@gmail.com'),
 (2, 'Naina Borse Mam', 'admin', 'admin@12', 'admin@123.com');
 
 -- --------------------------------------------------------

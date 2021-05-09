@@ -12,7 +12,7 @@ if (isset($_SESSION['id'])) {
     } else {
         echo "<script>alert('error to connect to database');</script>";
     }
-   echo $old_name=$admin[1];
+  $old_name=$admin[1];
     if (isset($_POST['fname']) && isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['pass'])) {
         extract($_POST);
         $query = "  UPDATE fmsadmin SET `name`='$fname',`uname`='$uname',`upassword`='$pass',`email`='$email' WHERE id= $uid";
