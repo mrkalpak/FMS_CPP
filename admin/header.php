@@ -62,7 +62,7 @@ font-size: 20px;
                                 Admin Admin</span> 
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="#">Profile</a>
+                                <a class="dropdown-item" href="./admin_profile.php">Profile</a>
                                 <a class="dropdown-item" href="#">Change Password</a>
                                 <a class="dropdown-item" href="../logout.php">Logout</a>
                             </div>
