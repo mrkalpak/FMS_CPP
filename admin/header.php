@@ -26,7 +26,7 @@
                 
             </div>
             <div class="menu ">
-                <a href="./index.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
+                <a href="../index.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
                 <a href="./admin_dashboard.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Dashboard</a>
                 <a href="./admin_profile.php" class="d-block text-light p-3"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
                 <a href="./add_faculty.php" class="d-block text-light p-3"><i class="bi bi-plus-square-fill mr-2 lead"></i>Add Faculty </a>
