@@ -35,15 +35,17 @@ if (isset($_SESSION['id'])) {
 <?php include "./header.php"; ?>
 <!--content section-->
 <div id="container">
+    <center>
     <setion class="py-3 container-fluid">
         <div class="row">
-            <div class="col-lg-9">
-                <h1 class="dash font-weight-bold m-0 text-dark mt-4 ml-4">
+            <div class="col-lg-11">
+                <h1 class="font-weight-bold m-0 text-dark mt-4 ml-4">
                     <span style="margin-left: 60px;">Feedback</span>
                 </h1>
             </div>
         </div>
     </setion>
+    </center>
     <section>
         <div class="container">
             <table class="table">

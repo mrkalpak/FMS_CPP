@@ -28,21 +28,21 @@ if (isset($_SESSION['id'])) {
     echo "<script>alert('You are not login');document.location='../admin_login.php'; </script>";
 }
 ?>
-
 <?php include "./header.php"; ?>
 <!--content section-->
+<style></style>
             <div id="container">
                 <setion class="py-3 container-fluid">
                     <div class="row justify-content-center">
                         <div class="col-sm-4">
-                            <h1 class="font-weight-bold m-0 text-dark mt-4 ml-4 ">
-                                <span style="margin-left: 60px;">Add Faculty</span>
+                            <h1 class="dash font-weight-bold m-0 text-dark mt-4 ml-4 ">
+                                <span style="margin-left: 60px;">Add Student</span>
                             </h1>
                         </div>
                     </div>  
                 </setion>
                 <section>
-                    <div class="container w-75 ">
+                    <div class="container w-75">
                         <div class="row mt-2 mb-4 justify-content-center">
                             <div class="card card-body col-sm-6 fontforform ">
                                 <form id="card_content" method="post" action="./add_faculty.php">
@@ -52,14 +52,20 @@ if (isset($_SESSION['id'])) {
                                     <label>Username:</label>
                                     <input type="text" class="form-control" placeholder="Enter Username " name="uname" id="uname" required>
                                     <br>
+                                    <label>Department:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Department" name="dpt" id="dpt" required>
+                                    <br>
+                                    <label>Semester:</label>
+                                    <input type="text" class="form-control" placeholder="Enter Semester " name="sem" id="sem" required>
+                                    <br>
                                     <label>E-mail:</label>
                                     <input type="email" class="form-control" name="email" placeholder="Enter email" id="email" required>
                                     <br>
                                     <label>Password:</label>
                                     <input type="password" name="pass" class="form-control" placeholder="Enter password" id="pwd" required>
                                     <br>
-                                    <label>Subject:</label>
-                                    <input type="text" class="form-control" placeholder="Enter Subject" id="sub" required>
+                                    <label>Mobile No.:</label>
+                                    <input type="text" name="mob" class="form-control" placeholder="Enter Mobile No" id="sob" required>
                                     <br><center>
                                     <button class="btn btn-danger justify-content-center">Add</button></center>
                                 </form>

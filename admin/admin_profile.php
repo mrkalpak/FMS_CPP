@@ -48,8 +48,8 @@ if (isset($_SESSION['id'])) {
 <?php include "./header.php"; ?>
 <!--Content section-->
 <center>
-    <h2 class="dash font-weight-bold text-dark mt-4 ">Admin Profile</h2>
-    <div class="card card-body  w-75 fontforform">
+    <h2 class=" font-weight-bold text-dark mt-4 ">Admin Profile</h2>
+    <div class="card card-body col-sm-6 w-75 fontforform">
         <form id="card_content" method="POST" action="./admin_profile.php">
             <label>Full Name:</label>
             <input type="text" class="form-control" placeholder="Enter Full Name" value="<?php echo $admin[1] ?>" id="fname" name="fname">

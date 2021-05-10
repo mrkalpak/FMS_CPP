@@ -40,7 +40,7 @@ if (isset($_SESSION['id'])) {
         <section>
             <div class="container">
                 <div class="row mt-2 mb-4 w-75">
-                    <div class="card card-body col-sm update">
+                    <div class="card card-body col-sm fontforform">
                         <form id="card_content" method="POST">
                             <label>Full Name:</label>
                             <input type="text" class="form-control" placeholder="Enter Full Name" id="fname"

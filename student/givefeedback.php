@@ -72,10 +72,7 @@ if (isset($_SESSION['id'])) {
 }
 
 ?>
-
-
-
-
+<!--Content section-->
 <div id="container">
     <setion class="py-3">
         <center>
@@ -87,7 +84,7 @@ if (isset($_SESSION['id'])) {
         <section>
             <div class="container">
                 <div class="row mt-2 mb-4 justify-content-center">
-                    <div class="card card-body col-sm-4 update">
+                    <div class="card card-body col-sm-4 fontforform">
                         <h5 class="card-header text-dark p-3">**To give feedback, student first should select the respective faculty name from the given options: </h5>
                         <label for="sel1 text-dark">Select Faculty Name:</label>
                         <select class="form-control" name="faculty1" id="sel" onclick="visible_Feedback()" required>
@@ -101,7 +98,7 @@ if (isset($_SESSION['id'])) {
                 </div>
             </div>
             <div class="row mt-2 mb-4  justify-content-center" style="width:85%">
-                <div class="card card-body col-sm update" style="visibility: hidden;" id="feedback">
+                <div class="card card-body col-sm fontforform" style="visibility: hidden;" id="feedback">
                     <!-- <form id="card_content "> -->
                     <h5 class="card-header text-dark p-3">**Here student should give appropriate feedback to selected faculty: </h5>
                     <table class="table table-light">

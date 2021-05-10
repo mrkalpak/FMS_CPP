@@ -36,19 +36,24 @@ if (isset($_SESSION['id'])) {
 <?php include "./header.php"; ?>
             <!--End of Navbar-->
             <!--content section-->
+        <center>
             <div id="container">
-                <setion class="py-3 container-fluid">
+                <center>
+                <setion class=" container-fluid">
+                    
                     <div class="row">
-                        <div class="col-lg-9">
-                            <h1 class="dash font-weight-bold m-0 text-dark mt-4 ml-4"><span style="margin-left: 60px;">Dashboard</span></h1>
-                            <p class="text-muted lead ml-4"><span style="margin-left: 60px;">It's only the overview for the <span class="font-weight-bold text-dark">Admin</span>!!!</span></p>
+                        <div class="col-lg-12">
+                            <h1 class="font-weight-bold text-dark mt-4">Dashboard</h1>
+                            <p class="text-muted lead "><span>It's only the overview for the <span class="font-weight-bold text-dark">Admin</span>!!!</span></p>
                         </div>
                     </div>
+                    
                 </setion>
+                </center>
                 <section>
                     <center>
                     <div class="container-fluid">
-                        <div class="row ml-4 mt-2 mb-4 ">
+                        <div class="row ml-4 mt-2 mb-lg-5 ">
                             <div class="card card-body  card_cs col-lg-3 mr-4 stat bg-success"><center>
                                 <h3 class="font-weight-bold text-center"><?php echo $student ?></h3>
                                 <h5>Total number of students</h5>
@@ -63,10 +68,13 @@ if (isset($_SESSION['id'])) {
                                 <h4>Total Feedbacks</h4></center>
                             </div>  
                         </div>
+                        <br>
+                        <br>
                     </div>
                     </center>
                 </section>  
             </div>
+        </center>
             <!--end content section-->
             <!--Footer Section-->
             <div>
