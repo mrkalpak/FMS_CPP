@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 09, 2021 at 02:51 PM
+-- Generation Time: May 10, 2021 at 10:00 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -106,11 +106,11 @@ CREATE TABLE `rating` (
 --
 
 INSERT INTO `rating` (`id`, `que`, `rating`, `faculty`, `noentry`) VALUES
-(1, 'The content of the subject was useful and interesting', 21, 'Ashwini Lokhande Mam', 5),
-(2, 'The lecture was structured and well organised', 21, 'Ashwini Lokhande Mam', 5),
-(3, 'The audio and visual connection was good', 21, 'Ashwini Lokhande Mam', 5),
-(4, 'The class description accurately described the class content', 21, 'Ashwini Lokhande Mam', 5),
-(5, 'hey here que', 21, 'Ashwini Lokhande Mam', 5),
+(1, 'The content of the subject was useful and interesting', 21, 'Ashwini Lokhande', 5),
+(2, 'The lecture was structured and well organised', 21, 'Ashwini Lokhande', 5),
+(3, 'The audio and visual connection was good', 21, 'Ashwini Lokhande', 5),
+(4, 'The class description accurately described the class content', 21, 'Ashwini Lokhande', 5),
+(5, 'hey here que', 21, 'Ashwini Lokhande', 5),
 (6, 'The content of the subject was useful and interesting', 12, 'Naina Borse Mam', 4),
 (7, 'The lecture was structured and well organised', 13, 'Naina Borse Mam', 4),
 (8, 'The audio and visual connection was good', 12, 'Naina Borse Mam', 4),
