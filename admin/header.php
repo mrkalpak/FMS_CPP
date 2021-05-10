@@ -52,12 +52,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                 <span class=".pill"><img src="../img/user_login.png"></img>
-                                Admin Admin</span> 
+                                <?php echo $_SESSION['name'] ?></span> 
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./admin_profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Change Password</a>
-                                <a class="dropdown-item" href="../logout.php">Logout</a>
+                                <a class="dropdown-item" href="./admin_profile.php"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
+                                <a class="dropdown-item" href="../logout.php" style="color: red;"><i class=" bi bi-box-arrow-right mr-2 lead"></i>Logout</a>
                             </div>
                         </li>
                     </ul>

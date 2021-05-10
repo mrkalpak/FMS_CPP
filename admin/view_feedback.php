@@ -16,6 +16,7 @@ if (isset($_SESSION['id'])) {
         echo "<script>alert('error to connect to database');</script>";
     }
     $query = "SELECT * FROM rating where faculty='$faculty1'";
+  
     $result = mysqli_query($conn, $query);
     if ($result) {
 
