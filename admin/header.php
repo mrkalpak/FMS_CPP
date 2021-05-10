@@ -44,7 +44,7 @@
                 </button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img class="img-fluid rounded-circle mr-2" src="login_logo.png" alt="..." width="50" height="50"></span>
+                    <span><img class="img-fluid rounded-circle mr-2" src="../img/login_logo.png" alt="..." width="50" height="50"></span>
                 </button>
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
