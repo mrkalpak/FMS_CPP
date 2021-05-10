@@ -5,14 +5,14 @@ if (isset($_SESSION['id'])) {
     $uid = $_SESSION['id'];
     if (isset($_POST['fname']) && isset($_POST['uname']) && isset($_POST['email']) && isset($_POST['pass'])) {
         extract($_POST);
-        $query = "  INSERT INTO `fmsadmin`( `name`, `uname`, `upassword`, `email`) VALUES ('$fname','$uname','$email','$pass')";
-        echo $query;
+        $query = "  INSERT INTO `fmsadmin`( `name`, `uname`, `email`, `upassword`) VALUES ('$fname','$uname','$email','$pass')";
+       
         $result = mysqli_query($conn, $query);
         if ($result) {
             
         
         $query = "  INSERT INTO `faculty`( `name`) VALUES ('$fname')";
-        echo $query;
+        
         $result = mysqli_query($conn, $query);
         if ($result) {
             echo "<script>alert('submited'); document.location='./admin_profile.php';</script>";
