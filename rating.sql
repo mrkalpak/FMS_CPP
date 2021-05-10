@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2021 at 10:00 AM
+-- Generation Time: May 10, 2021 at 02:08 PM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.1
 
@@ -139,7 +139,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id`, `uname`, `name`, `upassword`, `email`, `phone`, `department`, `sem`) VALUES
-(1, 'user_user', 'user ', 'user@123', 'user@gmail.com', 123456789, 'computer ', '6');
+(1, 'user_user', 'user ', 'user@123', 'user@gmail.com', 123456789, 'computer ', '6'),
+(2, 'user_user ', 'user user user', 'user@12', 'test@gmail.com', 987643210, 'Computer', '6');
 
 --
 -- Indexes for dumped tables
@@ -207,7 +208,7 @@ ALTER TABLE `rating`
 -- AUTO_INCREMENT for table `student`
 --
 ALTER TABLE `student`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
