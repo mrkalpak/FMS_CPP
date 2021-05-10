@@ -24,7 +24,14 @@ if (isset($_SESSION['id'])) {
         
         $result = mysqli_query($conn, $query);
         if ($result) {
-            echo "<script>alert('Updated'); document.location='./admin_profile.php';</script>";
+            $query = "  UPDATE rating SET `faculty`='$fname' WHERE  `faculty`= '$old_name'";
+            $_SESSION['name']=$fname;
+            $result = mysqli_query($conn, $query);
+            if ($result) {
+                echo "<script>alert('Updated'); document.location='./admin_profile.php';</script>";
+            } else {
+                echo "<script>alert('error to connect to database'); </script>";
+            }
         } else {
             echo "<script>alert('error to connect to database'); </script>";
         }

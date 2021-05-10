@@ -26,7 +26,7 @@
                 
             </div>
             <div class="menu ">
-                <a href="./index.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
+                <a href="../index.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Home</a>
                 <a href="./admin_dashboard.php" class="d-block text-light p-3"><i class="bi bi-grid-3x3-gap-fill mr-2 lead"></i>Dashboard</a>
                 <a href="./admin_profile.php" class="d-block text-light p-3"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
                 <a href="./add_faculty.php" class="d-block text-light p-3"><i class="bi bi-plus-square-fill mr-2 lead"></i>Add Faculty </a>
@@ -44,7 +44,7 @@
                 </button>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span><img class="img-fluid rounded-circle mr-2" src="login_logo.png" alt="..." width="50" height="50"></span>
+                    <span><img class="img-fluid rounded-circle mr-2" src="../img/login_logo.png" alt="..." width="50" height="50"></span>
                 </button>
                 <!-- Navbar links -->
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
@@ -52,12 +52,11 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
                                 <span class=".pill"><img src="../img/user_login.png"></img>
-                                Admin Admin</span> 
+                                <?php echo $_SESSION['name'] ?></span> 
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="./admin_profile.php">Profile</a>
-                                <a class="dropdown-item" href="#">Change Password</a>
-                                <a class="dropdown-item" href="../logout.php">Logout</a>
+                                <a class="dropdown-item" href="./admin_profile.php"><i class="bi bi-person-square mr-2 lead"></i>Profile</a>
+                                <a class="dropdown-item" href="../logout.php" style="color: red;"><i class=" bi bi-box-arrow-right mr-2 lead"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
