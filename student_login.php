@@ -46,13 +46,8 @@
                 <div class="valid-feedback">Valid.</div>
                 <div class="invalid-feedback">Please fill out this field.</div>
               </div>
-              <div class="form-group">
-                <label class="form-check-label">
-                  <input class="form-check-input" type="checkbox" name="remember"> Remember Me.
-                </label>
-              </div>
               <div>
-                <input type="submit" value="Login" class="btn btn-primary mb-5" id="btn">
+                <input type="submit" value="Login" class="btn btn-primary mb-5 btn_btn" id="btn">
               </div>
             </form>
         </div>

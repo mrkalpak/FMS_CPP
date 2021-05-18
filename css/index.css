@@ -89,6 +89,16 @@ width: 100%;
   font-style:bold 2px;
   background-color:rgb(243, 20, 20);
 }
+
+.btn_btn{
+  border-radius: 2em;
+  font-weight: 300;
+  margin: 0 0.1em 0.1em 0;
+  font-size:20px;
+  box-sizing: border-box;
+  padding: 0.2em 1.2em;
+  border:0.16em solid rgba(169, 141, 247, 0.973)
+}
 .a1{
 
   color:black;

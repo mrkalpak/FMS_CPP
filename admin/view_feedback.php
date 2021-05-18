@@ -47,7 +47,9 @@ if (isset($_SESSION['id'])) {
     </setion>
     </center>
     <section>
+        <center>
         <div class="container">
+          <div class="card card-body w-75 fontforform ">
             <table class="table">
                 <thead class="thead-light">
                     <tr>
@@ -63,10 +65,6 @@ if (isset($_SESSION['id'])) {
                             <td>
                                 <label for="Q<?php echo $que[$i][0] ?>"><?php echo $que[$i][1] ?></label>
                             </td>
-
-
-
-
                             <td>
                                 <?php $r = (int)($rating[$i][2] / $rating[$i][4]) ?>
                                 <?php for ($j = 0; $j < $r; $j++) {
@@ -74,22 +72,21 @@ if (isset($_SESSION['id'])) {
                                     <span class="fa fa-star checked"></span>
                                 <?php } ?>
                             </td>
-
-
-
                         </tr>
                     <?php } ?>
 
                 </tbody>
             </table>
+          </div>
         </div>
+    </center>
     </section>
 </div>
 <!--end content section-->
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</body>
+<!--Footer Section-->
+<?php include "./footer.php"; ?>
+
+
 
 </html>

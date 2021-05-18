@@ -46,7 +46,7 @@
             <div class="valid-feedback">Valid.</div>
             <div class="invalid-feedback">Please fill out this field.</div>
          </div>
-         <button type="submit" class="btn btn-primary">Login</button>
+         <button type="submit" class="btn btn-primary btn_btn">Login</button>
       </form>
    </center>
 </section>

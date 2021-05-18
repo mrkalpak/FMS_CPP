@@ -34,7 +34,6 @@ if (isset($_SESSION['id'])) {
 }
 ?>
 <?php include "./header.php"; ?>
-            <!--End of Navbar-->
             <!--content section-->
         <center>
             <div id="container">
